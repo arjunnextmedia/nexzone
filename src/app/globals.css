@@ -5,22 +5,120 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes slide-in-zoom {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-slide-in-zoom {
+  animation: slide-in-zoom 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes zoom-in-inner {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-zoom-in-inner {
+  animation: zoom-in-inner 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slide-up-in {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.animate-slide-up-in {
+  animation: slide-up-in 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-slide-up-out {
+  animation: slide-up-out 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Improve rendering performance */
+.slide-enter,
+.slide-exit {
+  height: 100%;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* New slide comes from bottom */
+@keyframes slideFromBottomSmooth {
+  0% {
+    transform: translateY(110%);
+  }
+
+  60% {
+    transform: translateY(-4%);
+  }
+
+  80% {
+    transform: translateY(2%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Old slide goes to top */
+@keyframes slideToTopSmooth {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-110%);
+  }
+}
+
+/* Apply animations */
+.slide-enter {
+  animation: slideFromBottomSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.slide-exit {
+  animation: slideToTopSmooth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
