@@ -33,7 +33,7 @@ const additionalServices = [
 
 export default function AdditionalServices() {
     return (
-        <section className="w-full py-10 md:py-16 lg:py-20 bg-[#F0F2F5]">
+        <section className="w-full py-10 md:py-16 lg:py-20 ">
             <Container>
                 {/* Section Heading */}
                 <div className="mb-12 md:mb-14 lg:mb-16 w-full">

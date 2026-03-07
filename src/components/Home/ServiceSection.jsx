@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Container from "@/components/Common/Layout/Container";
 import { useState } from "react";
+import SectionHeading from "../Common/SectionHeading";
 
 const services = [
     "Printer Service",
@@ -19,87 +19,99 @@ export default function ServiceSection() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="w-full py-10 md:py-16 bg-[#F0F2F5]">
-            <Container>
-                <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-3xl overflow-hidden">
+        /*
+         * Section is full-bleed (no Container).
+         * Inner div caps at 1440px (= 689 + 12 + 739 from Figma).
+         * On mobile the two panels stack vertically.
+         */
+        <section className="w-full">
+            <div className="
+                flex flex-col lg:flex-row
+                max-w-[1520px] mx-auto
+                gap-3
+            ">
 
-                    {/* Left - Blue Gradient Card */}
-                    <div className="w-full lg:w-[45%] bg-gradient-to-br from-[#0b2d6e] via-[#0d4fa0] to-[#1a6fd4] rounded-3xl px-5 sm:px-7 pt-7 sm:pt-9 pb-7 sm:pb-9 flex flex-col">
+                {/* ══════════════════════════════════════════
+                    LEFT PANEL — dark-navy gradient
+                    Figma: 689px wide, tr-18px, br-18px radius
+                ══════════════════════════════════════════ */}
+                <div className="
+                    w-full lg:w-[689px] lg:shrink-0
+                    bg-gradient-to-br from-[#071020] via-[#0b2d6e] to-[#1565C8]
+                    pl-8 sm:pl-14 lg:pl-36
+                    pr-6 sm:pr-8
+                    pt-9 sm:pt-11 pb-9 sm:pb-11
+                    flex flex-col
+                    rounded-tr-[18px] rounded-br-[18px]
+                    lg:rounded-tr-[18px] lg:rounded-br-[18px]
+                    max-[1024px]:rounded-bl-[18px] max-[1024px]:rounded-tl-[18px]
+                ">
+                    {/* Title */}
+                    <div className="mb-7 sm:mb-9 ">
+                        <SectionHeading
+                            normalText="Our Services"
+                            className="text-white"
+                        />
+                    </div>
 
-                        {/* Title */}
-                        <div className="mb-6 sm:mb-7">
-                            <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                                Our Services
-                            </h3>
-                            {/* Swoosh ribbon underline */}
-                            <svg
-                                className="mt-2"
-                                width="130"
-                                height="22"
-                                viewBox="0 0 130 22"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0 16 Q30 2 70 8 Q100 12 130 4"
-                                    stroke="#1a6fd4"
-                                    strokeWidth="9"
-                                    strokeLinecap="round"
-                                    fill="none"
-                                />
-                                <path
-                                    d="M0 16 Q30 2 70 8 Q100 12 130 4"
-                                    stroke="#2589f5"
-                                    strokeWidth="5"
-                                    strokeLinecap="round"
-                                    fill="none"
-                                />
-                            </svg>
-                        </div>
-
-                        {/* Service Buttons */}
-                        <div className="flex flex-col gap-2.5 sm:gap-3">
-                            {services.map((service, index) => {
-                                const isActive = index === activeIndex;
-                                return (
-                                    <button
-                                        key={service}
-                                        type="button"
-                                        onClick={() => setActiveIndex(index)}
-                                        className={`flex items-center w-full rounded-full px-5 sm:px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold transition-all duration-300
+                    {/* Service Buttons — max-w 496px on large screens */}
+                    <div className="flex flex-col gap-3 w-[496px] max-w-full">
+                        {services.map((service, index) => {
+                            const isActive = index === activeIndex;
+                            return (
+                                <button
+                                    key={service}
+                                    type="button"
+                                    onClick={() => setActiveIndex(index)}
+                                    className={`
+                                        flex items-center w-full
+                                        rounded-2xl px-5 py-3.5
+                                        text-sm sm:text-base font-semibold
+                                        transition-all duration-300 cursor-pointer
                                         ${isActive
-                                                ? "bg-white text-[#0a1628] shadow-lg"
-                                                : "bg-[#1565C8] hover:bg-[#1878e8] text-white shadow-md"
-                                            }`}
-                                    >
-                                        <span
-                                            className="inline-block w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-[#E22386] flex-shrink-0 mr-3 sm:mr-4"
-                                        />
-                                        <span className="text-left">{service}</span>
-                                    </button>
-                                );
-                            })}
-                        </div>
+                                            ? "bg-white text-[#0a1628] shadow-lg"
+                                            : "bg-[#1565C8] hover:bg-[#1878e8] text-white shadow-md"
+                                        }
+                                    `}
+                                >
+                                    <span className="
+                                        inline-block w-4 h-4 rounded-full
+                                        bg-[#E22386] flex-shrink-0 mr-4
+                                    " />
+                                    <span className="text-left">{service}</span>
+                                </button>
+                            );
+                        })}
                     </div>
-
-                    {/* Right - Image Panel */}
-                    <div className="w-full lg:w-[55%]">
-                        <div className="h-full min-h-[300px] md:min-h-[400px] lg:min-h-0 bg-[#0d0d12] flex items-center justify-center overflow-hidden">
-                            <div className="relative w-full h-full min-h-[300px] md:min-h-[460px]">
-                                <Image
-                                    src="/images/services/service-img.webp"
-                                    alt="Printer service technician working on a printer"
-                                    fill
-                                    sizes="(max-width: 1024px) 100vw, 55vw"
-                                    className="object-contain object-center"
-                                    priority
-                                />
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </Container>
+
+                {/* ══════════════════════════════════════════
+                    RIGHT PANEL — dark image panel
+                    Figma: 739px wide, tl-18px, bl-18px radius
+                ══════════════════════════════════════════ */}
+                <div className="
+                    w-full lg:flex-1
+                    bg-[#0C1111]
+                    flex items-center justify-center
+                    rounded-tl-[18px] rounded-bl-[18px]
+                    lg:rounded-tl-[18px] lg:rounded-bl-[18px]
+                    max-[1024px]:rounded-tr-[18px] max-[1024px]:rounded-br-[18px]
+                    overflow-hidden
+                    min-h-[300px] sm:min-h-[380px] lg:min-h-0
+                ">
+                    <div className="relative w-full h-full min-h-[300px] sm:min-h-[420px] lg:min-h-[560px]">
+                        <Image
+                            src="/images/services/service-img.webp"
+                            alt="Printer service technician working on a printer"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 739px"
+                            className="object-contain object-center"
+                            priority
+                        />
+                    </div>
+                </div>
+
+            </div>
         </section>
     );
 }

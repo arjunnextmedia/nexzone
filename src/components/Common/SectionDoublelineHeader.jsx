@@ -5,6 +5,9 @@ export default function SectionDoublelineHeader({
     highlightText = "",
     highlightColor = "#1565C8",
     normalColor = "#111111",
+    MobfontSize="1.8rem",
+    TabfontSize="4.8vw",
+    DeskfontSize="2.5rem",
 }) {
     const hasNormal = normalText.trim().length > 0;
     const hasHighlight = highlightText.trim().length > 0;
@@ -60,7 +63,7 @@ export default function SectionDoublelineHeader({
                         style={{
                             fontWeight: 700,
                             lineHeight: 1.2,
-                            fontSize: "clamp(1.8rem, 4.8vw, 2.5rem)",
+                            fontSize: `clamp(${MobfontSize}, ${TabfontSize}, ${DeskfontSize})`,
                             margin: 0,
                         }}
                     >

@@ -1,11 +1,12 @@
 export default function SectionHeading({
     normalText = "About",
-    highlightText = "us",
-    highlightColor = "text-blue-600"
+    highlightText = "",
+    highlightColor = "text-blue-600",
+    className = ""
 }) {
     return (
         <div className="inline-block">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold relative z-10">
+            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-semibold relative z-10 ${className}`}>
                 {normalText} <span className={highlightColor}>{highlightText}</span>
             </h2>
 

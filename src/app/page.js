@@ -6,19 +6,27 @@ import Container from "@/components/Common/Layout/Container";
 import ServiceSection from "@/components/Home/ServiceSection";
 import AdditionalServices from "@/components/Home/AdditionalServices";
 import WhyChooseSection from "@/components/Home/WhyChooseSection";
+import TrustSection from "@/components/Home/TrustSection";
+import BestBrandsSection from "@/components/Home/BestBrandsSection";
+import FaqSection from "@/components/Home/FaqSection";
+import TestimonialsSection from "@/components/Home/TestimonialsSection";
 
 export default function Home() {
   return (
     <main className="w-full flex-col flex min-h-screen relative">
       <HeroSection />
       <AboutSection />
+      <ProductsSection />
+      <AccessoriesSection />
       <ServiceSection />
       <AdditionalServices />
       <WhyChooseSection />
-      <ProductsSection />
-      <AccessoriesSection />
+      <TrustSection />
+      <BestBrandsSection />
+      <TestimonialsSection />
+      <FaqSection />
 
-      {/* Other sections that need a contained width will go inside Container below */}
+
 
     </main>
   );
