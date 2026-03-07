@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <nav className="w-full ">
             <Container>
-                <div className="flex justify-between items-center w-full h-[110px] gap-2 lg:gap-4 xl:gap-8 overflow-hidden">
+                <div className="flex justify-between items-center w-full h-[110px] gap-2 lg:gap-3 xl:gap-6">
                     {/* Logo */}
                     <div className="shrink-0 flex items-center">
                         <Link href="/">
@@ -30,15 +30,15 @@ export default function Navbar() {
                     </div>
 
                     {/* Desktop Navigation Links */}
-                    <div className="hidden md:flex justify-center bg-white/50 rounded-3xl">
-                        <div className="flex space-x-1 lg:space-x-4 xl:space-x-6 px-1 lg:px-4 xl:px-6 py-1.5 lg:py-2.5 rounded-full items-center">
+                    <div className="hidden lg:flex justify-center bg-white/50 rounded-3xl shrink">
+                        <div className="flex space-x-1 lg:space-x-2 xl:space-x-4 px-1 lg:px-2 xl:px-4 py-1.5 lg:py-2.5 rounded-full items-center">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href;
                                 return (
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className={`px-1.5 md:px-2 xl:px-3 py-1.5 md:py-2 rounded-md text-sm xl:text-lg font-light transition-colors whitespace-nowrap ${isActive ? "text-[#084274]" : "text-black hover:text-[#084274]"
+                                        className={`px-2 lg:px-3 xl:px-4 py-1.5 md:py-2 rounded-md text-sm lg:text-base xl:text-lg font-light transition-colors whitespace-nowrap ${isActive ? "text-[#084274]" : "text-black hover:text-[#084274]"
                                             }`}
                                     >
                                         {link.label}
@@ -49,23 +49,23 @@ export default function Navbar() {
                     </div>
 
                     {/* Search Bar - Desktop */}
-                    <div className="hidden md:flex items-stretch shrink-0">
-                        <div className="relative flex items-stretch rounded-full w-40 md:w-48 lg:w-64 xl:w-80 2xl:w-96 border border-[#077ADE] shadow-sm overflow-hidden bg-[#F8F9FA]">
-                            <button className="bg-[#077ADE] self-stretch hover:bg-blue-600 text-white px-3 md:px-4 xl:px-5 flex items-center justify-center transition-colors ">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+                    <div className="hidden lg:flex items-stretch shrink-0">
+                        <div className="relative flex items-stretch rounded-full w-44 lg:w-56 xl:w-72 2xl:w-80 border border-[#077ADE] shadow-sm overflow-hidden bg-[#F8F9FA]">
+                            <button className="bg-[#077ADE] self-stretch hover:bg-blue-600 text-white px-3 md:px-4 flex items-center justify-center transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
                             </button>
                             <input
                                 type="text"
                                 placeholder="Search in this store"
-                                className="w-full bg-transparent text-sm text-gray-700 py-3 px-2 lg:px-4 focus:outline-none placeholder-gray-500 font-medium"
+                                className="w-full bg-transparent text-xs md:text-sm text-gray-700 py-2.5 md:py-3 px-2 focus:outline-none placeholder-gray-500 font-medium"
                             />
                         </div>
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="flex items-center md:hidden">
+                    <div className="flex flex-1 justify-end items-center lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#0073e6]"
@@ -85,7 +85,7 @@ export default function Navbar() {
                 </div>
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="md:hidden border-t border-gray-100 bg-white">
+                    <div className="lg:hidden border-t border-gray-100 bg-white">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-inner">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href;

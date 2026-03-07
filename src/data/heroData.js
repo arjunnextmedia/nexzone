@@ -1,29 +1,29 @@
 export const slides = [
-        {
+    {
         id: 1,
-        titleLine1Part1: "Premium ",
-        titleLine1Highlight1: "office ",
-        titleLine1Highlight2: "copiers",
-        titleLine2: "for your growing business.",
-        description: "Equip your workspace with our advanced and reliable printers.\nHigh performance, low maintenance, and perfect quality.",
+        titleLine1Part1: "Trusted Printer ",
+        titleLine1Highlight1: "Suppliers in  ",
+        titleLine1Highlight2: " Dubai",
+        titleLine2: "for Businesses",
+        description: "Reliable printer suppliers in Dubai offering high-quality printers, toner cartridges, and office printing solutions for businesses of all sizes.",
         image: "/images/banner/banner-02.webp"
     },
     {
         id: 2,
-        titleLine1Part1: "Smart ",
-        titleLine1Highlight1: "printing ",
-        titleLine1Highlight2: "solutions",
-        titleLine2: "designed for efficiency.",
-        description: "Streamline your document workflow with smart digital solutions.\nConnect directly to cloud services and print from anywhere.",
+        titleLine1Part1: "Smart Office Automation & ",
+        titleLine1Highlight1: "Managed Print Solutions for ",
+        titleLine1Highlight2: " Modern",
+        titleLine2: " Businesses",
+        description: "NexZone Technologies delivers end-to-end office automation services, including the supply, rental, servicing, and maintenance of printers, photocopiers, and scanners, along with managed print and document solutions.",
         image: "/images/banner/banner-03.webp"
     },
-        {
+    {
         id: 3,
-        titleLine1Part1: "Torem ",
-        titleLine1Highlight1: "ipsum ",
-        titleLine1Highlight2: "dolorest",
-        titleLine2: "consectetur adipiscing elit.",
-        description: "Torem ipsum dolor sit amet, consectetur adipiscing elit.\nEtiam eu turpis molestie, dictum est a, mattis tellus.",
+        titleLine1Part1: "IT Accessories & ",
+        titleLine1Highlight1: "Office  ",
+        titleLine1Highlight2: "Consumables",
+        titleLine2: "Solution",
+        description: "NexZone supplies genuine IT accessories and office consumables, including toners, ink, cables, storage, and peripherals, ensuring reliable performance and uninterrupted business operations.",
         image: "/images/banner/banner-01.webp"
     }
 ];

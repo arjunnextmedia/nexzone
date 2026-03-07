@@ -91,8 +91,7 @@ const Footer = () => {
                             <div className="flex-1 rounded-[40px] bg-linear-to-br from-[#0c243f] to-[#004c99] p-10 shadow-xl">
                                 <h4 className="mb-4 text-2xl md:text-3xl font-semibold tracking-tight">Follow in</h4>
                                 <p className="mb-8 text-sm md:text-base leading-relaxed ">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis
-                                </p>
+Follow us for updates on printer sales, maintenance, networking solutions, and office equipment in Dubai.                                </p>
                                 <div className="flex gap-4">
                                     <a
                                         href="#"

@@ -46,7 +46,7 @@ export default function HeroSection() {
             }}
         >
             <Container>
-         
+
                 <div className="
                     flex flex-col lg:flex-row
                     items-center justify-between
@@ -56,14 +56,14 @@ export default function HeroSection() {
                     w-full relative
                 ">
 
-                
+
                     <div className="w-full lg:w-1/2 flex flex-col justify-center items-start z-10 text-white">
 
-            
+
                         <div className="
                             relative w-full overflow-hidden
-                            min-h-[260px]  md:min-h-[200px]
-                            lg:min-h-[340px] xl:min-h-[380px]
+                            min-h-[280px] sm:min-h-[260px] md:min-h-[320px]
+                            lg:min-h-[380px] xl:min-h-[400px]
                             mb-2 sm:mb-0 md:mb-8
                         ">
                             {slides.map((slide, index) => {
@@ -96,10 +96,10 @@ export default function HeroSection() {
 
                         {/* CTA Button */}
                         <Link
-                            href="/products"
+                            href="/contacts"
                             className="inline-flex items-center gap-2 bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-gray-900 transition-colors shadow-lg w-max z-30"
                         >
-                            Button
+                            Talk to Our Experts
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 ml-2 mt-px">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -112,7 +112,7 @@ export default function HeroSection() {
                         flex justify-center lg:justify-end items-center
                         h-[260px] sm:h-[320px] md:h-[380px] lg:h-[500px] xl:h-[600px]
                     ">
-        
+
                         <div className="absolute bottom-[5%] left-1/2 -translate-x-[45%] w-[110%] lg:w-[130%] max-w-[900px] z-0 pointer-events-none flex justify-center">
                             <svg viewBox="0 0 749 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto drop-shadow-sm scale-y-125">
                                 <ellipse cx="267.783" cy="287.29" rx="267.783" ry="287.29" transform="matrix(0.945869 -0.324548 0.95803 0.286669 -154.476 124.283)" fill="#15548A" fillOpacity="0.4" />

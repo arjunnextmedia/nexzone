@@ -29,13 +29,13 @@ export default function AccessoriesSection() {
                             className="group bg-white rounded-2xl border-2 border-[#15548A] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
                         >
                             {/* Accessory Image */}
-                            <div className="relative w-full h-60 lg:h-80 bg-white flex items-center justify-center p-6">
+                            <div className="relative w-full h-72 lg:h-96 bg-white flex items-center justify-center p-4">
                                 <Image
                                     src={accessory.image}
                                     alt={accessory.name}
                                     fill
                                     style={{ objectFit: 'contain' }}
-                                    className="group-hover:scale-105 transition-transform duration-300 py-6 px-3"
+                                    className="group-hover:scale-105 transition-transform duration-300 py-4 px-2"
                                 />
                             </div>
 

@@ -3,36 +3,36 @@ export const faqData = [
         id: 1,
         question: "What kinds of assistance can I get from NexZone Technologies?",
         answer:
-            "NexZone Technologies provides a wide range of services including printer rental, AMC (Annual Maintenance Contracts), managed print services, toner supply, spare parts, and technical support across the UAE.",
+            "We are committed to offering full technical support and AMC plans when supplying, renting, and maintaining printers, photocopiers, scanners, and IT accessories.",
     },
     {
         id: 2,
         question: "Are you a printer and copier rental services provider?",
         answer:
-            "Yes, we offer flexible short-term and long-term rental plans for printers and copiers suited to businesses of all sizes, with full maintenance support included.",
+            "Of course, we are your best choice for printer and copier rental services with flexible short-term and long-term rentals along with installation, maintenance, and consumables support.",
     },
     {
         id: 3,
         question: "What do I get within your AMC package?",
         answer:
-            "Our AMC package includes scheduled preventive maintenance visits, priority on-call technical support, genuine spare parts replacement, and toner supply depending on the plan chosen.",
+            "Our AMC is designed to include different services such as preventive maintenance, on-call technical support, spare parts (according to the contract), and performance monitoring.",
     },
     {
         id: 4,
         question: "How prompt is your technical support in responding?",
         answer:
-            "We guarantee a response within 4 business hours for standard issues and offer emergency same-day support for critical failures under our AMC contracts.",
+            "Whenever you need our assistance, our certified technicians are on hand to give rapid response all over UAE, thus avoiding downtime and helping your business to be more efficient.",
     },
     {
         id: 5,
         question: "Can I get toner and spare parts through your company?",
         answer:
-            "Absolutely. We supply genuine OEM toner cartridges and compatible spare parts for all major printer brands at competitive prices, with fast delivery across the UAE.",
+            "It is indeed the case that we stock and offer genuine toner cartridges, consumables, and replacement parts for all supported printer and copier models.",
     },
     {
         id: 6,
         question: "Which brands do you support?",
         answer:
-            "We support all leading brands including Brother, RICOH, HP, Toshiba, Samsung, Canon, Epson, Xerox, Kyocera, and OKI.",
+            "We collaborate with world leading manufacturers of printer and copier brands, thus guaranteeing reliable performance and extended durability.",
     },
 ];

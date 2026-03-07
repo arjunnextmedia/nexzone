@@ -28,7 +28,7 @@ export default function FaqLeftPanel() {
                     maxWidth: "360px",
                 }}
             >
-                To a great extent, we handle customer performances through efficient
+                We handle customer performances through efficient
                 office automation solutions such as printer rental, AMC support, and
                 managed print services throughout the UAE. Below are some of the
                 clients&apos; frequently asked questions with answers.

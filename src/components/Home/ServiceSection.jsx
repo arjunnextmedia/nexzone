@@ -62,12 +62,12 @@ export default function ServiceSection() {
                                 <button
                                     key={service}
                                     type="button"
-                                    onClick={() => setActiveIndex(index)}
+                                    onMouseEnter={() => setActiveIndex(index)}
                                     className={`
                                         flex items-center w-full
                                         rounded-2xl px-5 py-3.5
                                         text-sm sm:text-base font-semibold
-                                        transition-all duration-300 cursor-pointer
+                                        transition-all duration-300 cursor-default
                                         ${isActive
                                             ? "bg-white text-[#0a1628] shadow-lg"
                                             : "bg-[#1565C8] hover:bg-[#1878e8] text-white shadow-md"
@@ -112,6 +112,6 @@ export default function ServiceSection() {
                 </div>
 
             </div>
-        </section>
+        </section >
     );
 }
