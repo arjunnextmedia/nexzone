@@ -15,7 +15,7 @@ export default function Navbar() {
             <Container>
                 <div className="flex justify-between items-center w-full h-[110px] gap-2 lg:gap-4 xl:gap-8 overflow-hidden">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center">
+                    <div className="shrink-0 flex items-center">
                         <Link href="/">
                             <div className="relative w-32 h-12 md:w-40 md:h-16 xl:w-48 xl:h-20">
                                 <Image
@@ -30,7 +30,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Desktop Navigation Links */}
-                    <div className="hidden md:flex justify-center">
+                    <div className="hidden md:flex justify-center bg-white/50 rounded-3xl">
                         <div className="flex space-x-1 lg:space-x-4 xl:space-x-6 px-1 lg:px-4 xl:px-6 py-1.5 lg:py-2.5 rounded-full items-center">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href;
@@ -38,7 +38,7 @@ export default function Navbar() {
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className={`px-1.5 md:px-2 xl:px-3 py-1.5 md:py-2 rounded-md text-sm xl:text-base font-medium transition-colors whitespace-nowrap ${isActive ? "text-[#084274]" : "text-black hover:text-[#084274]"
+                                        className={`px-1.5 md:px-2 xl:px-3 py-1.5 md:py-2 rounded-md text-sm xl:text-lg font-light transition-colors whitespace-nowrap ${isActive ? "text-[#084274]" : "text-black hover:text-[#084274]"
                                             }`}
                                     >
                                         {link.label}
