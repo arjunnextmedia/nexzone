@@ -1,11 +1,11 @@
 export const slides = [
     {
         id: 1,
-        titleLine1Part1: "Trusted Printer ",
-        titleLine1Highlight1: "Suppliers in  ",
-        titleLine1Highlight2: " Dubai",
-        titleLine2: "for Businesses",
-        description: "Reliable printer suppliers in Dubai offering high-quality printers, toner cartridges, and office printing solutions for businesses of all sizes.",
+        titleLine1Part1: "High-performance ",
+        titleLine1Highlight1: "Photocopy Printer  ",
+        titleLine1Highlight2: "  Machines",
+        titleLine2: "for modern offices",
+        description: "Fast, reliable, and cost-efficient multifunction printers designed for high-volume copying, printing, and scanning with seamless workflow integration.",
         image: "/images/banner/banner-02.webp"
     },
     {
@@ -14,7 +14,8 @@ export const slides = [
         titleLine1Highlight1: "Managed Print Solutions for ",
         titleLine1Highlight2: " Modern",
         titleLine2: " Businesses",
-description: "NexZone Technologies provides office automation solutions including supply, rental, servicing, and maintenance of printers, photocopiers, and scanners, along with managed print services.",        image: "/images/banner/banner-03.webp"
+description: "NexZone Technologies delivers end-to-end office automation services, including the supply, rental, servicing, and maintenance of printers, photocopiers, and scanners,along with managed print and document solutions.",        
+image: "/images/banner/banner-03.webp"
     },
     {
         id: 3,

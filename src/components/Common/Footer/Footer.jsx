@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '../Layout/Container';
+import SearchBar from '../Navbar/SearchBar';
 
 const Footer = () => {
     return (
@@ -16,20 +17,11 @@ const Footer = () => {
                         }}
                     >
                         <div className="flex items-center">
-                            <img src="/images/branding/logo-02.svg" alt="Nexzone Logo" className="w-32 h-12 md:w-40 md:h-16 xl:w-48 xl:h-20 object-contain object-left" />
+                            <img src="/images/branding/NEXZONE LOGO WHITE.svg" alt="Nexzone Logo" className="w-32 h-24 md:w-40 md:h-24 xl:w-48 xl:h-28 object-contain object-left" />
                         </div>
 
                         <div className="flex items-stretch shrink-0 w-full md:w-auto">
-                            <div className="relative flex items-stretch rounded-full w-full md:w-[400px] lg:w-[450px] xl:w-[500px] shadow-2xl overflow-hidden bg-white">
-                                <input
-                                    type="text"
-                                    placeholder="Search products..."
-                                    className="w-full bg-transparent text-base text-gray-700 py-4 px-8 focus:outline-none placeholder-gray-400 font-medium"
-                                />
-                                <button className="bg-[#077ADE] hover:bg-blue-600 text-white px-10 font-bold transition-all active:scale-95 flex items-center justify-center whitespace-nowrap">
-                                    Search
-                                </button>
-                            </div>
+                            <SearchBar isFooter />
                         </div>
                     </div>
 
@@ -91,10 +83,10 @@ const Footer = () => {
                             <div className="flex-1 rounded-[40px] bg-linear-to-br from-[#0c243f] to-[#004c99] p-10 shadow-xl">
                                 <h4 className="mb-4 text-2xl md:text-3xl font-semibold tracking-tight">Follow in</h4>
                                 <p className="mb-8 text-sm md:text-base leading-relaxed ">
-Follow us for updates on printer sales, maintenance, networking solutions, and office equipment in Dubai.                                </p>
+                                    Follow us for updates on printer sales, maintenance, networking solutions, and office equipment in Dubai.                                </p>
                                 <div className="flex gap-4">
                                     <a
-                                        href="#"
+                                        href="https://www.facebook.com/share/17vAWEJVji"
                                         className="flex h-10 w-10 items-center justify-center rounded-xl transition-all hover:scale-110 hover:shadow-lg"
                                         style={{
                                             backgroundImage: "url('/socialmedia-icons/facebook.svg')",
@@ -105,7 +97,7 @@ Follow us for updates on printer sales, maintenance, networking solutions, and o
                                         aria-label="Facebook"
                                     ></a>
                                     <a
-                                        href="#"
+                                        href="https://www.linkedin.com/groups/17649069"
                                         className="flex h-10 w-10 items-center justify-center rounded-xl transition-all hover:scale-110 hover:shadow-lg"
                                         style={{
                                             backgroundImage: "url('/socialmedia-icons/linked-in.svg')",
@@ -116,7 +108,7 @@ Follow us for updates on printer sales, maintenance, networking solutions, and o
                                         aria-label="LinkedIn"
                                     ></a>
                                     <a
-                                        href="#"
+                                        href="https://www.instagram.com/nexzone_dubai?igsh=OXdybXloN3FxcTVq"
                                         className="flex h-10 w-10 items-center justify-center rounded-xl transition-all hover:scale-110 hover:shadow-lg"
                                         style={{
                                             backgroundImage: "url('/socialmedia-icons/instagram.svg')",
@@ -127,7 +119,9 @@ Follow us for updates on printer sales, maintenance, networking solutions, and o
                                         aria-label="Instagram"
                                     ></a>
                                     <a
-                                        href="#"
+                                        href="https://wa.me/971508997350"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex h-10 w-10 items-center justify-center rounded-xl transition-all hover:scale-110 hover:shadow-lg"
                                         style={{
                                             backgroundImage: "url('/socialmedia-icons/whatsapp.svg')",

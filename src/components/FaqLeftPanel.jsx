@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function FaqLeftPanel() {
     return (
         <div>
-        
+
             <h2
                 style={{
                     margin: "0 0 16px",
@@ -21,7 +21,7 @@ export default function FaqLeftPanel() {
 
             <p
                 style={{
-                    margin: "0 0 4px",
+                    margin: "0 0 15px",
                     fontSize: "clamp(0.82rem, 1.5vw, 0.93rem)",
                     color: "#4B5563",
                     lineHeight: 1.7,
@@ -34,24 +34,24 @@ export default function FaqLeftPanel() {
                 clients&apos; frequently asked questions with answers.
             </p>
 
-   
+
             <div
                 style={{
                     position: "relative",
-                    width: "clamp(200px, 30vw, 320px)",
+                    width: "clamp(200px, 30vw, 290px)",
                     aspectRatio: "1 / 1",
                 }}
             >
-             
+
                 <div
                     style={{
                         position: "absolute",
                         inset: 0,
-                 
+
                     }}
                 />
 
-             
+
                 <div
                     style={{
                         position: "absolute",
@@ -62,7 +62,7 @@ export default function FaqLeftPanel() {
                         src="/images/faqs/faq-printer-mock.webp"
                         alt="Office printer machine"
                         fill
-                        style={{ objectFit: "contain", objectPosition: "center" }}
+                        style={{ objectFit: "cover", objectPosition: "top" }}
                         sizes="(max-width: 640px) 55vw, (max-width: 1024px) 30vw, 320px"
                         priority
                     />

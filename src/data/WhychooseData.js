@@ -9,16 +9,16 @@ export const features = [
     {
         id: 2,
         title: "FAST DELIVERY",
-        description: "Pallets 3-7days\nContainer 2-3weeks",
+        description: "Fast and reliable shipping\nensures quick order processing.",
         icon: "/images/icons/fast-delivery.svg",
         alt: "Fast Delivery Icon",
     },
     {
         id: 3,
-        title: "OEM ODM SUPPORT",
-        description: "Customized and branded\npackaging supporting",
+        title: "SUPPORT",
+        description: "We provide dedicated support \nand efficient service",
         icon: "/images/icons/oem-odm-support.svg",
-        alt: "OEM ODM Support Icon",
+        alt: "Support Icon",
     },
     {
         id: 4,

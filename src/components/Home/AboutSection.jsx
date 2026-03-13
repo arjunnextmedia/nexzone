@@ -77,8 +77,13 @@ export default function AboutSection() {
                                 highlightColor="text-[#077ADE]"
                             />
 
-                            <p className="text-sm md:text-base lg:text-lg  leading-relaxed mt-12">
-                                NexZone Technologies FZE LLC is a  office automation company based in Al Nahda, Sharjah, UAE. We are engaged in the business of printer sales and rental services, photocopier AMC contracts, scanners, and IT accessories for companies of all scales. We aim to deliver dependable, efficient, and budget-friendly document solutions that help businesses become more productive and make their daily operations easier. Through partnerships with top international brands, we guarantee good quality, robustness, and excellent performance over time.
+                          <p className="text-sm md:text-base lg:text-lg  leading-relaxed mt-12">
+                                NexZone Technologies FZE LLC is a leading office automation company based in Al
+                                Nahda, Sharjah, UAE. We specialize in printer sales and <strong>Rental services</strong>, <strong>Photocopier AMC contracts</strong>, <strong>Scanners</strong>, and <strong>IT accessories</strong> for businesses of all sizes. As Trusted
+                                Printer Suppliers in Dubai, we are committed to delivering reliable, efficient, and
+                                cost-effective document solutions that help companies improve productivity and simplify
+                                their daily operations. Through partnerships with top international brands, we ensure
+                                high-quality products, durability, and long-term performance for our clients.
                             </p>
                         </div>
 
