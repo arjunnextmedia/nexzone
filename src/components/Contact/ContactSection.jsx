@@ -4,18 +4,30 @@ import React, { useState } from 'react';
 import Container from '../Common/Layout/Container';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
 
-const ContactInfoCard = ({ icon: Icon, title, content, subContent }) => (
-    <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-        <div className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-[#048BFF] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-            <Icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
+const ContactInfoCard = ({ icon: Icon, title, content, subContent, href }) => {
+    const CardContent = (
+        <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer w-full text-left h-full">
+            <div className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-[#048BFF] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                <Icon className="w-4 h-4 md:w-6 md:h-6 text-white" />
+            </div>
+            <div>
+                <h4 className="text-white font-semibold text-sm md:text-lg mb-0.5 md:mb-1">{title}</h4>
+                <p className="text-gray-300 text-xs md:text-sm leading-relaxed">{content}</p>
+                {subContent && <p className="text-gray-400 text-[10px] md:text-xs mt-0.5 md:mt-1">{subContent}</p>}
+            </div>
         </div>
-        <div>
-            <h4 className="text-white font-semibold text-sm md:text-lg mb-0.5 md:mb-1">{title}</h4>
-            <p className="text-gray-300 text-xs md:text-sm leading-relaxed">{content}</p>
-            {subContent && <p className="text-gray-400 text-[10px] md:text-xs mt-0.5 md:mt-1">{subContent}</p>}
-        </div>
-    </div>
-);
+    );
+
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noopener noreferrer" className="block w-full">
+                {CardContent}
+            </a>
+        );
+    }
+
+    return CardContent;
+};
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -79,6 +91,25 @@ const ContactSection = () => {
             setErrors(validationErrors);
             return;
         }
+
+        // ── Format WhatsApp Message ─────────────────────────────────────────
+        const WHATSAPP_NUMBER = "971508997350";
+        const message = `👋 *New Contact Inquiry*
+
+━━━━━━━━━━━━━━━━━━━━━━
+👤 *Name:* ${formData.name}
+📧 *Email:* ${formData.email}
+📞 *Phone:* ${formData.phone || 'N/A'}
+📂 *Service:* ${formData.subject}
+📝 *Message:* ${formData.message}
+━━━━━━━━━━━━━━━━━━━━━━`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        // Open WhatsApp in a new tab
+        window.open(waURL, '_blank');
+
         setErrors({});
         setSubmitted(true);
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
@@ -110,22 +141,25 @@ const ContactSection = () => {
                         <ContactInfoCard
                             icon={MapPin}
                             title="Visit Us"
-                            content="Sharjah, Industrial Area-3, UAE"
+                            content="Al Nahda Sharjah,UAE"
                             subContent="Open: 9:00 AM - 6:00 PM"
+                        // href="https://www.google.com/maps/search/?api=1&query=Sharjah+Industrial+Area-3+UAE"
                         />
 
                         <ContactInfoCard
                             icon={Phone}
                             title="Call Us"
-                            content="+971 6 123 4567"
+                            content="+971 50 899 8716"
                             subContent="Mon-Fri, 24/7 Support"
+                            href="tel:+971508998716"
                         />
 
                         <ContactInfoCard
                             icon={Mail}
                             title="Email Us"
-                            content="info@nexzone.ae"
-                            subContent="support@nexzone.ae"
+                            content="info@nexzoneuae.com"
+                            // subContent="support@nexzoneuae.com"
+                            href="mailto:info@nexzoneuae.com"
                         />
 
                         <ContactInfoCard
@@ -133,6 +167,7 @@ const ContactSection = () => {
                             title="Live Chat"
                             content="Available on WhatsApp"
                             subContent="Fastest response time"
+                            href="https://wa.me/971508997350"
                         />
                     </div>
 

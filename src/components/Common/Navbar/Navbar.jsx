@@ -6,6 +6,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/data/navbarItems";
 import Container from "@/components/Common/Layout/Container";
+import SearchBar from "./SearchBar";
+
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
@@ -17,9 +19,9 @@ export default function Navbar() {
                     {/* Logo */}
                     <div className="shrink-0 flex items-center">
                         <Link href="/">
-                            <div className="relative w-32 h-12 md:w-40 md:h-16 xl:w-48 xl:h-20">
+                            <div className="relative w-32 h-14 md:w-40 md:h-20 xl:w-48 xl:h-24">
                                 <Image
-                                    src="/images/branding/logo.svg"
+                                    src="/images/branding/NEXZONE LOGO.svg"
                                     alt="Nexzone Logo"
                                     fill
                                     style={{ objectFit: 'contain', objectPosition: 'left center' }}
@@ -50,18 +52,7 @@ export default function Navbar() {
 
                     {/* Search Bar - Desktop */}
                     <div className="hidden lg:flex items-stretch shrink-0">
-                        <div className="relative flex items-stretch rounded-full w-44 lg:w-56 xl:w-72 2xl:w-80 border border-[#077ADE] shadow-sm overflow-hidden bg-[#F8F9FA]">
-                            <button className="bg-[#077ADE] self-stretch hover:bg-blue-600 text-white px-3 md:px-4 flex items-center justify-center transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                </svg>
-                            </button>
-                            <input
-                                type="text"
-                                placeholder="Search in this store"
-                                className="w-full bg-transparent text-xs md:text-sm text-gray-700 py-2.5 md:py-3 px-2 focus:outline-none placeholder-gray-500 font-medium"
-                            />
-                        </div>
+                        <SearchBar />
                     </div>
 
                     {/* Mobile menu button */}
@@ -103,18 +94,7 @@ export default function Navbar() {
                             })}
                         </div>
                         <div className="pt-4 pb-4 px-4 border-t border-gray-100 bg-gray-50">
-                            <div className="relative flex items-center rounded-full w-full border border-gray-200 shadow-sm overflow-hidden bg-white">
-                                <button className="bg-[#0073e6] hover:bg-blue-600 text-white px-5 py-3 flex items-center justify-center transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                                    </svg>
-                                </button>
-                                <input
-                                    type="text"
-                                    placeholder="Search in this store"
-                                    className="w-full bg-transparent text-sm text-gray-700 py-3 px-4 focus:outline-none placeholder-gray-500 font-medium"
-                                />
-                            </div>
+                            <SearchBar isMobile />
                         </div>
                     </div>
                 )}

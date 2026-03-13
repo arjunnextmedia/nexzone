@@ -5,7 +5,6 @@ import ProductListing from '@/components/Products/ProductListing';
 const ProductsPage = () => {
     return (
         <main className="min-h-screen">
-            {/* Inner Hero Section */}
             <InnerHero
                 title="Our Products"
                 breadcrumb={[
@@ -13,7 +12,6 @@ const ProductsPage = () => {
                 ]}
             />
 
-            {/* Product Listing Section */}
             <ProductListing />
         </main>
     );
