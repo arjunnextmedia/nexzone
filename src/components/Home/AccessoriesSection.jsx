@@ -25,7 +25,7 @@ export default function AccessoriesSection() {
                     {accessories.map((accessory) => (
                         <Link
                             key={accessory.id}
-                            href={`/accessories/${accessory.slug}`}
+                            href={`/products?category=${accessory.categoryId}&name=${encodeURIComponent(accessory.name)}`}
                             className="group bg-white rounded-2xl border-2 border-[#15548A] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
                         >
                             {/* Accessory Image */}
